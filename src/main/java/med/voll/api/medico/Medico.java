@@ -4,8 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.consulta.Consulta;
 import med.voll.api.endereco.Endereco;
 import jakarta.persistence.*;
+import med.voll.api.paciente.Paciente;
+
+import java.util.List;
+
 @Table(name = "medicos")
 @Entity(name = "Medico")
 @Getter
@@ -25,6 +30,18 @@ public class Medico {
     @Embedded
     private Endereco endereco;
     private boolean ativo;
+
+    @OneToMany(mappedBy = "medico" )
+    private List<Consulta> consultas;
+
+    @ManyToMany
+    @JoinTable(
+            name = "medico_paciente",
+            joinColumns = @JoinColumn(name = "medico_fk"),
+            inverseJoinColumns = @JoinColumn(name = "paciente_fk")
+    )
+    private List<Paciente> pacientes;
+
 
     public Medico(DadosCadastroMedico dados) {
         this.ativo = true;
