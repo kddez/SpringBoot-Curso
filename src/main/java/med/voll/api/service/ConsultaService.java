@@ -1,13 +1,9 @@
-package med.voll.api.Service;
+package med.voll.api.service;
 
 import lombok.AllArgsConstructor;
-import med.voll.api.consulta.Consulta;
-import med.voll.api.consulta.ConsultaRepository;
+import med.voll.api.domain.consulta.ConsultaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 @Service
 @AllArgsConstructor

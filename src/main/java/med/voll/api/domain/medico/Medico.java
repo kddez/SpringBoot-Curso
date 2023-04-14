@@ -1,13 +1,13 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.consulta.Consulta;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.domain.consulta.Consulta;
+import med.voll.api.domain.endereco.Endereco;
+import med.voll.api.domain.paciente.Paciente;
 import jakarta.persistence.*;
-import med.voll.api.paciente.Paciente;
 
 import java.util.List;
 

@@ -1,11 +1,10 @@
-package med.voll.api.consulta;
+package med.voll.api.domain.consulta;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
-import med.voll.api.medico.Medico;
-import med.voll.api.paciente.Paciente;
+import med.voll.api.domain.medico.Medico;
+import med.voll.api.domain.paciente.Paciente;
 
 import java.time.LocalDateTime;
 

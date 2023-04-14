@@ -1,7 +1,7 @@
-package med.voll.api.Service;
+package med.voll.api.service;
 
 import lombok.AllArgsConstructor;
-import med.voll.api.paciente.PacienteRepository;
+import med.voll.api.domain.paciente.PacienteRepository;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor

@@ -1,10 +1,9 @@
-package med.voll.api.Service;
+package med.voll.api.service;
 
 import lombok.AllArgsConstructor;
-import med.voll.api.medico.MedicoRepository;
+import med.voll.api.domain.medico.MedicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @AllArgsConstructor

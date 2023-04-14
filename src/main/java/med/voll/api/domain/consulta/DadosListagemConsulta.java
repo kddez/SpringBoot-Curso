@@ -1,6 +1,6 @@
-package med.voll.api.consulta;
+package med.voll.api.domain.consulta;
 
-import med.voll.api.medico.Especialidade;
+import med.voll.api.domain.medico.Especialidade;
 
 import java.time.LocalDateTime;
 
