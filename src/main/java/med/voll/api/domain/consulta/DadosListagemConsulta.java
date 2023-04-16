@@ -11,9 +11,11 @@ public record DadosListagemConsulta(Long id,
                                     String nomeDoMedico,
                                     Especialidade especialidade,
                                     String crm,
-                                    LocalDateTime data) {
+                                    LocalDateTime data,
+                                    String status) {
     public DadosListagemConsulta(Consulta consulta){
         this(consulta.getId(), consulta.getDescricao(), consulta.getPaciente().getNome(), consulta.getPaciente().getCpf(),
-                consulta.getMedico().getNome(), consulta.getMedico().getEspecialidade(), consulta.getMedico().getCrm(), consulta.getData());
+                consulta.getMedico().getNome(), consulta.getMedico().getEspecialidade(),
+                consulta.getMedico().getCrm(), consulta.getData(),consulta.getStatus());
     }
 }

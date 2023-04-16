@@ -13,6 +13,8 @@ public record DadosCadastroConsulta(
         LocalDateTime data,
         @NotBlank
         String descricao,
+
+        String Status,
         @NotNull
         @Valid
         Paciente paciente,

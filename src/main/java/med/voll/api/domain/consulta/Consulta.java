@@ -24,6 +24,8 @@ public class  Consulta {
 
     private boolean ativo;
 
+    private String status;
+
     private LocalDateTime data;
 
     private String descricao;
@@ -42,11 +44,13 @@ public class  Consulta {
         this.paciente = paciente;
         this.data = dados.data();
         this.descricao = dados.descricao();
+        this.status = "agendado";
 
     }
 
     public void desmarcarConsulta() {
         this.ativo = false;
+        this.status = "desmarcado";
     }
 
 

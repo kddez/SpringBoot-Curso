@@ -5,7 +5,7 @@ import med.voll.api.domain.medico.Especialidade;
 import java.time.LocalDateTime;
 
 public record DadosDetalhamentoConsulta(Long id,
-                                    Boolean status,
+                                    String status,
                                     String descricao,
                                     String nomeDoPaciente,
                                     String cpf,
@@ -14,7 +14,7 @@ public record DadosDetalhamentoConsulta(Long id,
                                     String crm,
                                     LocalDateTime data) {
     public DadosDetalhamentoConsulta(Consulta consulta){
-        this(consulta.getId(), consulta.isAtivo(), consulta.getDescricao(), consulta.getPaciente().getNome(), consulta.getPaciente().getCpf(),
+        this(consulta.getId(), consulta.getStatus(), consulta.getDescricao(), consulta.getPaciente().getNome(), consulta.getPaciente().getCpf(),
                 consulta.getMedico().getNome(), consulta.getMedico().getEspecialidade(), consulta.getMedico().getCrm(), consulta.getData());
     }
 }
