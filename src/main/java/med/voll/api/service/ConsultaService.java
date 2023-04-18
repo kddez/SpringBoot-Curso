@@ -12,4 +12,6 @@ public class ConsultaService {
     @Autowired
     private final ConsultaRepository consultaRepository;
 
+
+
 }

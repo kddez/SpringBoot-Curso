@@ -1,6 +1,8 @@
 package med.voll.api.domain.consulta;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -52,6 +54,8 @@ public class  Consulta {
         this.ativo = false;
         this.status = "desmarcado";
     }
+
+
 
 
 

@@ -42,6 +42,16 @@ public class ConsultaController {
         Medico medico = mRepository.findById(dados.medico().getId())
                         .orElseThrow(() -> new IllegalArgumentException("Medico não encontrado"));
 
+        //Não permite a marcação da consulta de um paciente com perfil desativado.
+        if (!paciente.isAtivo()) {
+            return ResponseEntity.badRequest().body(" Paciente desativado");
+        }
+        //Não permite a marcação da consulta de um médico com perfil desativado.
+        if (!medico.isAtivo()) {
+            return ResponseEntity.badRequest().body(" Médico desativado");
+        }
+
+
         Consulta consulta = new Consulta(dados, paciente, medico);
             cRepository.save(consulta);
 
